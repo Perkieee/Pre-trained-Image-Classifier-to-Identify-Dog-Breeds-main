@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
-# PROGRAMMER: GLORIUS MUSYOKA
+# PROGRAMMER: KEVIN WALTER
 # DATE CREATED: 05/11/2024                                
 # REVISED DATE: 11/11/2024
 # PURPOSE: Create a function classify_images that uses the classifier function 
