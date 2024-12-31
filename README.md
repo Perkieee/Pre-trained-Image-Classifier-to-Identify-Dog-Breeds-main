@@ -5,19 +5,24 @@ This project focuses on classifying images of dogs into specific breeds, utilizi
 The project processes and classifies images using a selected CNN model (ResNet, AlexNet, VGG). Several functions are implemented to facilitate image classification, result evaluation, and performance summarization:
 
 *Image Classification:* Applies the chosen CNN model to label each image.
+
 *Label Comparison:* Compares the true pet image labels with the model’s predictions.
+
 *Dog Identification:* Verifies if the labels correspond to dogs, helping evaluate accuracy for both dog and non-dog classifications.
 
 ## Key Files
 
 *classifier.py:* Contains the pre-trained CNN model used for classifying images.
+
 *adjust_results4_isadog.py:* Determines if the predicted labels represent dogs, using a predefined list of dog breeds.
+
 *calculates_results_stats.py:* Computes key performance metrics (e.g., accuracy, precision) for dog and non-dog classifications.
+
 *dognames.txt:* A list of dog breed names used to verify if predicted labels represent dog breeds.
 
 ## Project Workflow
 
-*get_input_args:* Retrieves and parses three command-line arguments provided by the user when running the program. If any argument is missing, default values are applied:
+*get_input_args:* Retrieves and parses three command-line arguments the user provides when running the program. If any argument is missing, default values are applied:
 
 Image folder: --dir (default: pet_images)
 CNN model architecture: --arch (default: vgg)
