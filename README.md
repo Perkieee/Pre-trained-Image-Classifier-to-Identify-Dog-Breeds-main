@@ -1,45 +1,38 @@
 # Dog Breed Image Classifier
-This project is part of the Udacity AI programming with Python Course. The project classifies images of dogs into specific breeds, using machine learning to differentiate between dog and non-dog images. The classifier leverages pretrained convolutional neural network (CNN) models to accurately identify whether an image is of a dog and, if so, predict its breed. The main objective is to determine whether the model can classify dogs correctly, even if it misidentifies the specific breed.
+This project focuses on classifying images of dogs into specific breeds, utilizing machine learning to distinguish between dog and non-dog images. The classifier leverages pre-trained Convolutional Neural Network (CNN) models to identify accurately whether an image contains a dog and, if so, predict its breed. The primary goal is to assess the model's ability to correctly classify dogs, even when it misidentifies the specific breed.
 
-# Project Overview
-This project processes and classifies images of dogs and non-dogs using a specified CNN model (options include ResNet, AlexNet, and VGG). The following functions are implemented to adjust, evaluate, and summarize the classification results:
+## Project Overview
+The project processes and classifies images using a selected CNN model (ResNet, AlexNet, VGG). Several functions are implemented to facilitate image classification, result evaluation, and performance summarization:
 
-**Image Classification** - Uses the chosen CNN model to label each image.
+*Image Classification:* Applies the chosen CNN model to label each image.
+*Label Comparison:* Compares the true pet image labels with the model’s predictions.
+*Dog Identification:* Verifies if the labels correspond to dogs, helping evaluate accuracy for both dog and non-dog classifications.
 
-**Label Comparison** - Compares pet image labels with classifier predictions.
+## Key Files
 
-**Dog Identification** - Identifies whether the labels correspond to dogs, helping assess classification accuracy for dog and non-dog images.
+*classifier.py:* Contains the pre-trained CNN model used for classifying images.
+*adjust_results4_isadog.py:* Determines if the predicted labels represent dogs, using a predefined list of dog breeds.
+*calculates_results_stats.py:* Computes key performance metrics (e.g., accuracy, precision) for dog and non-dog classifications.
+*dognames.txt:* A list of dog breed names used to verify if predicted labels represent dog breeds.
 
-# Key Files
+## Project Workflow
 
-**classifier.py** - Contains the pre-trained CNN model used to classify images.
+*get_input_args:* Retrieves and parses three command-line arguments provided by the user when running the program. If any argument is missing, default values are applied:
 
-**adjust_results4_isadog.py** - Determines whether labels represent dogs based on a provided list of dog breeds.
+Image folder: --dir (default: pet_images)
+CNN model architecture: --arch (default: vgg)
+Dog names text file: --dogfile (default: dognames.txt)
 
-**calculates_results_stats.py** - Computes performance metrics such as accuracy and precision for both dog and non-dog classifications.
+*get_pet_labels:* Creates a dictionary (results_dic) of pet labels based on image filenames.
 
-**dognames.txt** - A file listing dog breed names used to check if labels are identified as dog breeds.
+*classify_images:* Processes images using the CNN model and stores the classification results in a dictionary with filenames as keys.
 
-# Project Workflow
+*adjust_results4_isadog:* Updates the dictionary by checking if each pet and classifier label represents a dog.
 
-**get_input_args:** Retrieves and parses the 3 command line arguments provided by the user when they run the program from a terminal window. This function uses Python's argparse module to create and define these 3 command line arguments. If the user fails to provide some or all of the 3 arguments, then the default values are used for the missing arguments. 
-      **Command Line Arguments:**
-      1. Image Folder as --dir with default value 'pet_images'
-      2. CNN Model Architecture as --arch with default value 'vgg'
-      3. Text File with Dog Names as --dogfile with default value 'dognames.txt'
+*calculates_results_stats:* Evaluates the classification results and computes performance metrics, such as accuracy for dog and non-dog classifications.
 
-**get_pet_labels:** Creates a dictionary of pet labels (results_dic) based upon the filenames of the image files.
+## Running the Project
 
-**Classify Images:** The classify_images function processes images using the CNN model to generate classifier labels. The results are stored in a dictionary with each image filename as a key.
+To run the project, execute the run_models_batch.sh script from the terminal. This script runs check_images.py three times, once for each CNN model, and stores the results in their respective .txt files.
 
-**Determine Dog Breeds:** The adjust_results4_isadog function updates the dictionary by determining whether each pet and classifier label represents a dog.
-
-**Calculate Results Statistics:** The calculates_results_stats function evaluates and compiles the classification results, calculating metrics for assessing model performance.
-
-# Running the Project
-
-Run the run_models_batch.sh file from the terminal.
-
-This will get the chek_images.py file and run it three times hence running all CNN models and input the results in their respective .txt files
-
-Tested other images from the website by pre-processing them then running the run_models_uploaded_batch.sh
+You can also test additional images by preprocessing them and then executing run_models_uploaded_batch.sh to classify them using the pre-trained models.
