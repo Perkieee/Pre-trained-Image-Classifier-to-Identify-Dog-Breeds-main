@@ -1,6 +1,5 @@
 # Dog Breed Image Classifier
-This project focuses on classifying images of dogs into specific breeds, utilizing machine learning to distinguish between dog and non-dog images. The classifier leverages pre-trained Convolutional Neural Network (CNN) models to identify accurately whether an image contains a dog and, if so, predict its breed. The primary goal is to assess the model's ability to correctly classify dogs, even when it misidentifies the specific breed.
-
+This project focuses on classifying images of dogs into specific breeds, utilizing machine learning to distinguish between dog and non-dog images. The classifier leverages pre-trained Convolutional Neural Network (CNN) models to identify accurately whether an image contains a dog and, if so, predict its breed. The primary goal is to assess the model's ability to correctly classify dog breeds.
 ## Project Overview
 The project processes and classifies images using a selected CNN model (ResNet, AlexNet, VGG). Several functions are implemented to facilitate image classification, result evaluation, and performance summarization:
 
