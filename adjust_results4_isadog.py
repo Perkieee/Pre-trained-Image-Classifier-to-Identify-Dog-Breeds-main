@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/adjust_results4_isadog.py
 #                                                                             
-# PROGRAMMER: GLORIUS MUSYOKA
+# PROGRAMMER: KEVIN WALTER
 # DATE CREATED: 01/11/2024                                
 # REVISED DATE: 12/11/2024
 # PURPOSE: Create a function adjust_results4_isadog that adjusts the results 
